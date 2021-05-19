@@ -1,8 +1,11 @@
 <?php
 include 'connect.php';
 include 'header.php';
+
+echo '<link rel="stylesheet" href="css/create_thread.css" type="text/css">';
+
  
-echo '<h2>Start a new thread</h2>';
+echo '<h2 class="title is-2 center">Start a new thread</h2>';
 if(!isset($_SESSION['signed_in']) || !$_SESSION['signed_in'])
 {
     //the user is not signed in
@@ -46,7 +49,13 @@ else
             {
          
                 echo '<form method="post" action="">
-                    Subject: <input type="text" name="thread_subject" />
+                    <div class="field">
+                        <label class="label">Subject</label>
+                            <div class="control">
+                            <input class="input" type="text" name="thread_subject" >
+                            </div>
+                    </div>
+
                     Board:'; 
                  
                 echo '<select name="thread_board">';
@@ -56,8 +65,20 @@ else
                     }
                 echo '</select>'; 
                      
-                echo ' Message: <textarea name="post_content" /></textarea>
-                    <br><br><input type="submit" value="Start thread" />
+                echo '
+                <div class="field">
+                    <label class="label">Message</label>
+                        <div class="control">
+                        <textarea class="textarea has-fixed-size" name="post_content"></textarea>
+                        </div>
+                </div>
+
+                <div class="field center">
+                    <div class="control">
+                        <button class="button is-link" type="submit">Submit</button>
+                    </div>
+                </div>
+                
                  </form>';
             }
         }

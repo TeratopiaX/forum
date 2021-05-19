@@ -1,19 +1,51 @@
 <?php
 include 'connect.php';
 include 'header.php';
+echo '<link rel="stylesheet" href="css/signup.css" type="text/css">';
  
-echo '<h3>Sign up</h3>';
+echo '<h3 class="title is-3 center">Sign up</h3>';
  
 if($_SERVER['REQUEST_METHOD'] != 'POST')
 {
     /*the form hasn't been posted yet, display it
       note that the action="" will cause the form to post to the same page it is on */
-    echo '<form method="post" action="">
-        Username: <input type="text" name="user_name" /><br>
-        Password: <input type="password" name="user_pass"><br>
-        Confirm pass: <input type="password" name="user_pass_check"><br>
-        E-mail: <input type="email" name="user_email"><br><br>
-        <input type="submit" value="Create account" />
+    echo '
+
+     <form method="post" action="">
+        <div class="field">
+            <label class="label">Username</label>
+            <div class="control">
+                <input class="input" type="text" name="user_name" >
+            </div>
+        </div>
+        
+
+        <div class="field">
+            <label class="label">Password</label>
+            <div class="control">
+                <input class="input" type="password" name="user_pass" >
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label"> Confirm Password</label>
+            <div class="control">
+                <input class="input" type="password" name="user_pass_check" >
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+                <input class="input" type="email" name="user_email" >
+            </div>
+        </div>
+
+        <div class="field center">
+            <div class="control">
+                <button class="button is-link" type="submit">Submit</button>
+            </div>
+        </div>
      </form>';
 }
 else
@@ -94,3 +126,9 @@ else
  
 include 'footer.php';
 ?>
+
+<htlm>
+    <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">    
+</head>
+</htlm>

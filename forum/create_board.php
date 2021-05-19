@@ -1,18 +1,39 @@
 <?php
 include 'connect.php';
 include 'header.php';
- 
-echo '<h2>Create a board</h2>';
+
+echo '<link rel="stylesheet" href="css/create_board.css" type="text/css">';
+
+echo '<h2 class="title is-2 center">Create a board</h2>';
 if($_SERVER['REQUEST_METHOD'] != 'POST')
 {
     //the form hasn't been posted yet, display it
-    echo "<form method='post' action=''>
-        Board name: <input type='text' name='board_name' />
-        Description:<br><textarea name='board_description' /></textarea>
-        <br>
-        <br>
-        <input type='submit' value='Add board' />
-     </form>";
+    echo
+
+     '
+
+     <form method="post" action="">
+        <div class="field">
+            <label class="label">Board Name</label>
+            <div class="control">
+                <input class="input" type="text" name="board_name" >
+            </div>
+        </div>
+        
+
+        <div class="field">
+            <label class="label">Description</label>
+            <div class="control">
+                <textarea class="textarea has-fixed-size" name="board_description"></textarea>
+            </div>
+        </div>
+
+        <div class="field center">
+            <div class="control">
+                <button class="button is-link" type="submit">Submit</button>
+            </div>
+        </div>
+     </form>';
 }
 else
 {

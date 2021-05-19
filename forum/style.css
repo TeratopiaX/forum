@@ -1,7 +1,11 @@
+@import
+"https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"; 
+
 body {
     background-color: #4E4E4E;
     text-align: center;         /* make sure IE centers the page too */
 }
+
  
 #wrapper {
     width: 900px;
@@ -80,11 +84,10 @@ h3 {margin: 0; padding: 0;}
 /* Menu styles */
 .item {
     background-color: #00728B;
-    border: 1px solid #032472;
     color: #FFF;
-    font-family: Arial;
+    /* font-family: Arial;
     padding: 3px;
-    text-decoration: none;
+    text-decoration: none; */ 
 }
  
 .leftpart {
@@ -125,3 +128,4 @@ textarea {
     width: 500px;
     height: 200px;
 }
+

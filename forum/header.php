@@ -15,8 +15,10 @@ session_start();
 </head>
 <body>
 <h1>3chan</h1>
+
+
     <div id="wrapper">
-    <div id="menu">
+    <!-- <div id="menu">
         <a class="item" href="/forum/index.php">Home</a> -
         <a class="item" href="/forum/create_thread.php">Start a new thread</a> -
         <a class="item" href="/forum/create_board.php">Create a board</a>
@@ -33,5 +35,52 @@ session_start();
             }
         ?>
         </div>
-    </div>
+    </div> -->
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/forum/index.php">Home</a> 
+                <a class="navbar-item" href="/forum/create_thread.php">Start a new thread</a> 
+                <a class="navbar-item" href="/forum/create_board.php">Create a board</a>
+            </div>
+                
+        <div id="userbar" class="navbar-end">
+                    <?php
+                        if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'])
+                        {
+                            echo 'Hello ' . $_SESSION['user_name'] . '. Not you?
+                            <div class="navbar-item">
+                            <div class="buttons">
+                                <a class="button is-light" href="signout.php">
+                                    Sign out
+                                </a>
+                            </div>
+                        </div>
+                            ';
+                        }
+                        else
+                        {
+                            echo ' <div class="navbar-item">
+                            <div class="buttons">
+                                <a class="button is-primary" href="signin.php">
+                                    <strong>Sign in</strong>
+                                </a>
+                                <a class="button is-light" href="signup.php">
+                                    Create an Account
+                                </a>
+                            </div>
+                        </div>';
+
+                           
+                            
+                        }
+                    ?>
+        </div>
+
+            
+
+        </div>
+    </nav>
+        
         <div id="content">
