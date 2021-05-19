@@ -1,8 +1,9 @@
 <?php
 include 'connect.php';
 include 'header.php';
- 
-echo '<h3>Sign in</h3>';
+echo '<link rel="stylesheet" href="css/signin.css" type="text/css">';
+
+echo '<h3 class="title is-3 center">Sign in</h3>';
  
 //first, check if the user is already signed in. If that is the case, there is no need to display this page
 if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true)
@@ -16,10 +17,26 @@ else
         /*the form hasn't been posted yet, display it
           note that the action="" will cause the form to post to the same page it is on */
         echo '<form method="post" action="">
-            Username: <input type="text" name="user_name" /><br>
-            Password: <input type="password" name="user_pass"><br><br>
-            <input type="submit" value="Sign in" />
-         </form>';
+                <div class="field">
+                    <label class="label">Username</label>
+                    <div class="control">
+                        <input class="input" type="text" name="user_name" >
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Password</label>
+                    <div class="control">
+                        <input class="input" type="password" name="user_pass" >
+                    </div>
+                </div>
+
+                <div class="field center">
+                <div class="control">
+                    <button class="button is-link" type="submit">Submit</button>
+                </div>
+                </div>         
+            </form>';
     }
     else
     {
