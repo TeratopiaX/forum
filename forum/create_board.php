@@ -2,7 +2,7 @@
 include 'connect.php';
 include 'header.php';
 
-echo '<link rel="stylesheet" href="css/create_board.css" type="text/css">';
+echo '<link rel="stylesheet" href="css/style.css" type="text/css">';
 
 echo '<h2 class="title is-2 center">Create a board</h2>';
 if($_SERVER['REQUEST_METHOD'] != 'POST')
