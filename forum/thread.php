@@ -68,7 +68,7 @@ else
                 //prepare the table
                 echo '<table border="1">
                       <tr>
-                        <th colspan="2" style="text-align:center">' . $thread_subject . '</th>
+                        <th colspan="2" style="text-align:center; color:white;">' . $thread_subject . '</th>
                       </tr>'; 
                      
                 while($row = mysqli_fetch_assoc($result))

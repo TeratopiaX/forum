@@ -11,10 +11,10 @@ session_start();
     <meta name="description" content="A short description." />
     <meta name="keywords" content="put, keywords, here" />
     <title>3chan</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
-<h1>3chan</h1>
+<h1 class="title is-1">3chan</h1>
 
 
     <div id="wrapper">
@@ -40,9 +40,9 @@ session_start();
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="/forum/index.php">Home</a> 
-                <a class="navbar-item" href="/forum/create_thread.php">Start a new thread</a> 
-                <a class="navbar-item" href="/forum/create_board.php">Create a board</a>
+                <a class="navbar-item item-color" href="/forum/index.php">Home</a> 
+                <a class="navbar-item item-color" href="/forum/create_thread.php">Start a new thread</a> 
+                <a class="navbar-item item-color" href="/forum/create_board.php">Create a board</a>
             </div>
                 
         <div id="userbar" class="navbar-end">
@@ -52,7 +52,7 @@ session_start();
                             echo 'Hello ' . $_SESSION['user_name'] . '. Not you?
                             <div class="navbar-item">
                             <div class="buttons">
-                                <a class="button is-light" href="signout.php">
+                                <a class="button is-light signout" href="signout.php">
                                     Sign out
                                 </a>
                             </div>

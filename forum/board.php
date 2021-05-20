@@ -1,6 +1,9 @@
 <?php
 include 'connect.php';
 include 'header.php';
+
+echo '<link rel="stylesheet" href="css/style.css" type="text/css">';
+
  
 //first select the board based on $_GET['board_id']
 $sql = "SELECT
@@ -60,8 +63,8 @@ else
                 // table header row
                 echo '<table border="1">
                       <tr>
-                        <th>Thread</th>
-                        <th>Created at</th>
+                        <th class="title-color">Thread</th>
+                        <th class="title-color">Created at</th>
                       </tr>'; 
                      
                 while($row = mysqli_fetch_assoc($result))

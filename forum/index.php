@@ -1,6 +1,8 @@
 <?php
 include 'connect.php';
 include 'header.php';
+
+echo '<link rel="stylesheet" href="css/style.css" type="text/css">';
  
 $sql = "SELECT
             board_id,
@@ -47,8 +49,8 @@ else
         //prepare the table
         echo '<table border="1">
               <tr>
-                <th>Board</th>
-                <th>Last thread</th>
+                <th class="title-color">Board</th>
+                <th class="title-color">Last thread</th>
               </tr>'; 
              
         while($row = mysqli_fetch_assoc($result))
