@@ -9,7 +9,7 @@ echo '<h2 class="title is-2 center">Start a new thread</h2>';
 if(!isset($_SESSION['signed_in']) || !$_SESSION['signed_in'])
 {
     //the user is not signed in
-    echo 'Sorry, you have to be <a href="/forum/signin.php">signed in</a> to start a new thread.';
+    echo 'Sorry, you have to be <a href="/signin.php">signed in</a> to start a new thread.';
 }
 else
 {

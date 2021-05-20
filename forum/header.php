@@ -10,11 +10,11 @@ session_start();
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="A short description." />
     <meta name="keywords" content="put, keywords, here" />
-    <title>3chan</title>
+    <title>Capstone</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
-<h1 class="title is-1">3chan</h1>
+<h1 class="title is-1">Capstone Projects</h1>
 
 
     <div id="wrapper">
@@ -40,9 +40,9 @@ session_start();
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item item-color" href="/forum/index.php">Home</a> 
-                <a class="navbar-item item-color" href="/forum/create_thread.php">Start a new thread</a> 
-                <a class="navbar-item item-color" href="/forum/create_board.php">Create a board</a>
+                <a class="navbar-item item-color" href="/index.php">Home</a> 
+                <a class="navbar-item item-color" href="/create_thread.php">Start a new thread</a> 
+                <a class="navbar-item item-color" href="/create_board.php">Create a board</a>
             </div>
                 
         <div id="userbar" class="navbar-end">
